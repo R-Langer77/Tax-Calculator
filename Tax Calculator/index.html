@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Tax Calculator
+        </h1>
+    </header>
+  
+  <div id="form-container">
+    <form id="taxForm">
+      <div class="input-group">
+        <label for="grossIncome">Enter Gross Annual Income:</label>
+        <div class="input-wrapper">
+          <input type="text" id="grossIncome" required>
+          <div class="error-container"></div> <!-- Container for error icon -->
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="extraIncome">Enter Extra Income:</label>
+        <div class="input-wrapper">
+          <input type="text" id="extraIncome" required>
+          <div class="error-container"></div> <!-- Container for error icon -->
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="deductions">Enter Total Applicable Deductions:</label>
+        <div class="input-wrapper">
+          <input type="text" id="deductions" required>
+          <div class="error-container"></div> <!-- Container for error icon -->
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="age">Age:</label>
+        <select id="age" required>
+          <option value="<40">&lt; 40</option>
+          <option value="≥40 & <60">≥ 40 &lt; 60</option>
+          <option value="≥60">≥ 60</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

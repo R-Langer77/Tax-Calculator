@@ -1,0 +1,155 @@
+body{
+    background-color: aqua;
+}
+/* CSS styles for form elements */
+#form-container {
+    width: 28%; /* Decreased width */
+    height: 430px; /* Increased height */
+    margin: 140px auto 0; /* Center the container horizontally and add margin-top to move it downwards */
+    border: 1px solid #ccc; /* Add rectangular border with grey color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    padding: 20px; /* Add padding for spacing */
+    overflow-y: auto; /* Add vertical scrollbar when content exceeds container height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align all items vertically */
+    position: relative; /* Positioning context for absolute positioning */
+    font-family: 'Aptos Narrow', sans-serif; /* Set font family */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgbs(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background-color: honeydew;
+
+    
+  }
+  
+  header {
+    text-align: center; /* Center align the title */
+    position: absolute; /* Position header absolutely */
+    top: 50px; /* Move the header 100px downwards */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .input-group {
+    margin-bottom: 20px; /* Add space after each input column */
+    background-color: honeydew
+  }
+  
+  label {
+    display: block;
+    text-align: left; /* Align column names to the left */
+    background-color: honeydew;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  #age {
+    width: 100%; /* Set the width of the age dropdown to match other input fields */
+    background-color: honeydew;
+  }
+  
+  input[type="text"],
+  select {
+    width: calc(100% - 16px); /* Adjust width to account for padding and borders */
+    display: block;
+    padding: 8px;
+    border: 1px solid #ccc; /* Set border color to grey */
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+    font-family: 'Aptos Narrow', sans-serif; /* Set font family */
+    background-color: honeydew;
+  }
+  
+  input[type="number"]:hover,
+  select:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  button[type="submit"] {
+    width: calc(80% - 150px); /* Set the width of the submit button to match input fields */
+    margin-top: 20px; /* Add margin to shift it downwards */
+    margin-left: 110px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    
+  }
+
+  body {
+    background-color: aqua;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper .error-container {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.input-wrapper .error-container .error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.input-wrapper .error-container .error-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.input-wrapper .error-container .error-icon:hover::before {
+    content: attr(title); /* Display tooltip text */
+    position: absolute;
+    top: -30px; /* Adjust tooltip position */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    visibility: hidden; /* Initially hide tooltip */
+}
+
+.input-wrapper .error-container .error-icon:hover::before {
+    visibility: visible; /* Show tooltip on hover */
+}
