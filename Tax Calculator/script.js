@@ -3,23 +3,22 @@ function validateInput(inputElement) {
     var inputValue = inputElement.value;
     var isError = isNaN(inputValue) || inputValue === '';
 
-    // Get the error container
+    
     var errorContainer = inputElement.parentElement.querySelector('.error-container');
 
-    // Clear previous error and tooltip
+   
     errorContainer.innerHTML = '';
 
-    // If input is invalid, display error icon and tooltip
     if (isError) {
         var errorIcon = document.createElement('div');
         errorIcon.classList.add('error-icon');
         errorIcon.innerHTML = '!';
-        errorIcon.setAttribute('title', 'Invalid input'); // Add tooltip title
+        errorIcon.setAttribute('title', 'Invalid input'); 
         errorContainer.appendChild(errorIcon);
     }
 }
 
-// Add event listeners to input fields for input validation
+
 var textInputs = document.querySelectorAll('input[type="text"]');
 textInputs.forEach(function(input) {
     input.addEventListener('input', function() {
@@ -44,7 +43,7 @@ function calculateTax() {
         return;
     }
 
-    // Rest of the code for calculating tax...
+
 }
 // Function to calculate tax and display result in a container box
 function calculateTax() {
@@ -79,38 +78,37 @@ function calculateTax() {
     // Create a container box for displaying the result
     var resultContainer = document.createElement("div");
     resultContainer.classList.add("result-container");
-    resultContainer.style.width = "600px"; // Width of the container
-    resultContainer.style.height = "40%"; // Height of the container
-    resultContainer.style.border = "1px solid #ccc"; // Border style
-    resultContainer.style.borderRadius = "5px"; // Border radius
-    resultContainer.style.padding = "20px"; // Padding
-    resultContainer.style.position = "absolute"; // Positioning
-    resultContainer.style.top = "40%"; // Center vertically
-    resultContainer.style.left = "50%"; // Center horizontally
-    resultContainer.style.transform = "translate(-50%, -50%)"; // Center the container
-    resultContainer.style.backgroundColor = "#f0f0f0"; // Background color
-    resultContainer.style.textAlign = "center"; // Center align text
-    resultContainer.style.fontFamily = "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"; // Font family
+    resultContainer.style.width = "600px"; 
+    resultContainer.style.height = "40%"; 
+    resultContainer.style.border = "1px solid #ccc"; 
+    resultContainer.style.borderRadius = "5px"; 
+    resultContainer.style.padding = "20px"; 
+    resultContainer.style.position = "absolute"; /
+    resultContainer.style.top = "40%"; 
+    resultContainer.style.left = "50%"; 
+    resultContainer.style.transform = "translate(-50%, -50%)"; 
+    resultContainer.style.backgroundColor = "#f0f0f0";
+    resultContainer.style.textAlign = "center"; 
+    resultContainer.style.fontFamily = "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"; 
     
     // Prepare the message to display
     var resultMessage = "<h2>Your Overall Annual Income after tax deductions</h2>";
-    resultMessage += "<p style='margin-bottom: 10px;'> " + overallIncome.toFixed(2) + " Lakhs</p>"; // Center align overall income
+    resultMessage += "<p style='margin-bottom: 10px;'> " + overallIncome.toFixed(2) + " Lakhs</p>";
     resultMessage += "<h3>Calculated Tax Amount</h3>";
     resultMessage += "<p>" + taxAmount.toFixed(2) + " Lakhs</p>";
   
     // Set the result message inside the container
     resultContainer.innerHTML = resultMessage;
   
-    // Append the container to the document body
     document.body.appendChild(resultContainer);
   }
   
-  // Add event listener to the submit button
+  
   document.getElementById("taxForm").addEventListener("submit", function(event) {
-    // Prevent the default form submission behavior
+    
     event.preventDefault();
     
-    // Call the function to calculate tax and display result
+   
     calculateTax();
   });
  
